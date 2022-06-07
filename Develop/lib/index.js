@@ -31,7 +31,8 @@ const additionalQuestions = {
 }
 
 const start = () => {
-    prompt({
+inquirer
+    .prompt({
         message: "What would you like to do?",
         type: "list",
         name: "choice",
@@ -49,7 +50,8 @@ const start = () => {
 }
 
 const createEmployee= () => {
-    prompt([
+inquirer
+    .prompt([
         {
             message: "What type of employee is this?",
             type: "list",
@@ -74,7 +76,8 @@ const createEmployee= () => {
     ]).then(emp => {
         const extraQuestion = additionalQuestions[emp.type];
 
-        prompt(extraQ).then(({extra})=> {
+        inquirer
+        .prompt(extraQuestion).then(({extra})=> {
             console.log("extra value --- ", extra);
 
             const newEmp = new Employee(emp.name, emp.id, emp.email, extra);
