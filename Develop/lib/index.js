@@ -106,7 +106,7 @@ const generateHTML = () => {
     <div class="p-4">
         <h1 class="text-center mb-5">EMPLOYEE DIRECTORY</h1>
         <div class="container-fluid" style="display:flex; justify-content: space-evenly">
-            ${employees.map(emp => emp.makeHTML()).join("\n")}
+        ${employees.map(emp => emp.generateHTML()).join("\n")}
         </div>
     </div>
 </body>
