@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const jest = require('jest');
 
-const Employee = require('./Employee');
+const Employee = require('./lib/Employee');
 
 const employees = [];
 
